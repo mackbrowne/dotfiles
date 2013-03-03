@@ -1,0 +1,16 @@
+[user]
+	name = Andy Joslin
+	email = andytjoslin@gmail.com
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+	c = commit -m
+  a = add
+  s = status
+	co = checkout
+  ir = rebase -i origin/master
+	last = log -1 HEAD
+[core]
+	excludesfile = /Users/ajoslin/.gitignore-global
+	editor = /usr/bin/vim
+[merge]
+	tool = vimdiff
