@@ -10,7 +10,8 @@ alias node32="~/tools/node-v0.8.14-darwin-x86/bin/node"
 alias npm32="~/tools/node-v0.8.14-darwin-x86/bin/npm"
 alias forge="/Users/ajoslin/Library/Trigger\ Toolkit/forge"
 alias resize="imgresizer"
-alias dsock="node /Users/ajoslin/dev/me/design-socket-server/app.js"
+alias dsock="/Users/ajoslin/dev/me/design-socket-server/bin/design-socket"
+alias bob="cd ~/Documents"
 
 function gitd {
   touch .git/git-daemon-export-ok

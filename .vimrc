@@ -11,22 +11,23 @@ Bundle 'gmarik/vundle'
 " My Bundles here:
 "
 " github repos
+Bundle 'wavded/vim-stylus'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'epmatsw/ag.vim'
 Bundle 'hail2u/vim-css3-syntax'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-unimpaired'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'kien/ctrlp.vim'
+Bundle 'kien/rainbow_parentheses.vim'
+Bundle 'pangloss/vim-javascript'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-ragtag'
-Bundle 'epmatsw/ag.vim'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'kien/ctrlp.vim'
-Bundle 'pangloss/vim-javascript'
+Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-unimpaired'
 Bundle 'wlangstroth/vim-haskell'
-Bundle 'scrooloose/nerdtree'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'scrooloose/syntastic'
-Bundle 'kien/rainbow_parentheses.vim'
 
 " Generic Options
 set t_Co=256
@@ -52,6 +53,7 @@ set wildignore+=node_modules
 set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,*.beam
 set wildignore+=*.jpg,*.jpeg,*.gif,*.png,*.gif,*.psd,*.ico
 set wildignore+=.sass-cache,.DS_Store,.bundle
+set wildignore+=.coffee.js
 set wildignore+=*.rbc,*.scssc,*.sassc
 set wildignore+=*/spec/dummy/*
 set wildignore+=*/tmp/*
@@ -60,7 +62,7 @@ set nofoldenable    " disable folding
 
 " Set high contrast
 set background=dark
-colorscheme desert
+colorscheme solarized
 let g:solarized_contrast="high"
 
 " Escape + save in one

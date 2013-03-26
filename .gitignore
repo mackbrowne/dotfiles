@@ -22,7 +22,6 @@
 *.html.js
 *.swp
 *.zip
-dev
 .vim/.netrwhist
 .vim/bundle/
 dist
