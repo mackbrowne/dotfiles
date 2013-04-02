@@ -1,6 +1,6 @@
 source ~/.zprofile
 
-export PATH=/usr/local/bin:/usr/texbin/:/usr/bin:/bin:/usr/sbin:/sbin:/Users/ajoslin/tools/redis-2.4.14/src:/Users/ajoslin/dev/tools/adt-bundle-mac/sdk/tools:/usr/local/share/npm/bin/
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/ajoslin/tools/redis-2.4.14/src:/Users/ajoslin/dev/tools/adt-bundle-mac/sdk/tools:/usr/local/share/npm/bin
 export EDITOR=vi
 
 zstyle ':completion:*:*:git:*' script ~/.git-completion.sh

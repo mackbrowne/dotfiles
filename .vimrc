@@ -28,6 +28,7 @@ Bundle 'tpope/vim-ragtag'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'wlangstroth/vim-haskell'
+Bundle 'tpope/vim-commentary'
 
 " Generic Options
 set t_Co=256
@@ -67,7 +68,7 @@ set matchpairs+=>:<
 set mouse=a
 
 " Set high contrast
-set background=light
+set background=dark
 colorscheme solarized
 let g:solarized_contrast="high"
 
