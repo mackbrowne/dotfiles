@@ -17,6 +17,7 @@
 !.vim/
 !.vim/bundle/vundle
 !.vimrc
+!.zprofile
 !.zshrc
 !.zshrc.pre-oh-my-zsh
 *.html.js
