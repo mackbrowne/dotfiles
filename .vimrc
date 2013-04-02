@@ -60,10 +60,21 @@ set wildignore+=*/tmp/*
 let mapleader="f"
 set nofoldenable    " disable folding
 
+" Count inside an html tag as a pair eg <span>hello</span>
+set matchpairs+=>:<
+
+" Mouse window resize
+set mouse=a
+
 " Set high contrast
-set background=dark
+set background=light
 colorscheme solarized
 let g:solarized_contrast="high"
+
+" Keep all lines in files from exceeding 80 characters so there are no wrapping
+" issues when viewed anywhere. 
+" The following command will create a vertical line at 80
+set colorcolumn=80
 
 " Escape + save in one
 inoremap Hh <Esc>
@@ -110,9 +121,6 @@ set nohlsearch
 
 " default to global replace (no g needed)
 set gdefault
-
-" File Extensions
-au BufRead,BufNewFile *.pde set filetype=java
 
 " Syntastic
 let g:syntastic_html_checker = []
