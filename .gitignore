@@ -9,6 +9,7 @@
 !.gitmodules
 !.oh-my-zsh/
 !.powerline-fonts
+!.slate.js
 !.tmux-powerline
 !.tmux-powerlinerc
 !.tmux.conf
