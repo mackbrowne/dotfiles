@@ -20,6 +20,7 @@
 !.zshrc
 !.zshrc.pre-oh-my-zsh
 !colors
+!scripts
 *.html.js
 *.swp
 *.zip

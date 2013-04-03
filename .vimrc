@@ -5,6 +5,8 @@ filetype off                   " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+:set mouse=a
+
 " let Vundle manage Vundle
 "  " required!
 Bundle 'gmarik/vundle'
@@ -64,11 +66,12 @@ set nofoldenable    " disable folding
 " Count inside an html tag as a pair eg <span>hello</span>
 set matchpairs+=>:<
 
-" Mouse window resize
-set mouse=a
-
 " Set high contrast
-set background=dark
+if filereadable("/tmp/LIGHT")
+  set background=light
+else
+  set background=dark
+endif
 colorscheme solarized
 let g:solarized_contrast="high"
 
@@ -170,3 +173,6 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+
+" Source vimrc
+map <C-R> :so ~/.vimrc<CR>
