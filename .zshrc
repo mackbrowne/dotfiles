@@ -1,17 +1,15 @@
 source ~/.zprofile
 
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/ajoslin/tools/redis-2.4.14/src:/Users/ajoslin/dev/tools/adt-bundle-mac/sdk/tools:/usr/local/share/npm/bin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/npm/bin:/usr/local/deployd/bin:/usr/local/Cellar/ruby/2.0.0-p0/bin
+export ANDROID_BIN=/Users/andyjoslin/dev/tools/android/sdk/tools/android
 export EDITOR=vi
 
 zstyle ':completion:*:*:git:*' script ~/.git-completion.sh
 
 alias subl='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl'
-alias node32="~/tools/node-v0.8.14-darwin-x86/bin/node"
-alias npm32="~/tools/node-v0.8.14-darwin-x86/bin/npm"
-alias forge="/Users/ajoslin/Library/Trigger\ Toolkit/forge"
+alias forge="/Users/andyjoslin/Library/Trigger\ Toolkit/forge"
 alias resize="imgresizer"
 alias dsock="/Users/ajoslin/dev/me/design-socket-server/bin/design-socket"
-alias bob="cd ~/Documents"
 
 function gitd {
   touch .git/git-daemon-export-ok

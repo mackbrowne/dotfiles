@@ -5,8 +5,6 @@ filetype off                   " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-:set mouse=a
-
 " let Vundle manage Vundle
 "  " required!
 Bundle 'gmarik/vundle'
@@ -17,7 +15,6 @@ Bundle 'wavded/vim-stylus'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'epmatsw/ag.vim'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
@@ -25,12 +22,18 @@ Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
-Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-ragtag'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-unimpaired'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-surround'
 Bundle 'wlangstroth/vim-haskell'
 Bundle 'tpope/vim-commentary'
+Bundle 'kana/vim-fakeclip'
+Bundle 'xolox/vim-lua-ftplugin'
+Bundle 'godlygeek/tabular'
+
+:let g:tabular_loaded = 1
 
 " Generic Options
 set t_Co=256
@@ -112,13 +115,20 @@ noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 
+" make splits open in more logical spots
+set splitbelow
+set splitright
+
 " tab completion in command line
 set wildmode=list:longest
 
 " fix mouse support inside tmux
 set ttymouse=xterm2
 
-" Remove trailing whitespace
+" allow dragging panes with mouse
+set mouse=a
+
+" Remove trailing whitespace on save
 map <leader>w :%s/\s\+$//e<CR>
 
 set nohlsearch
@@ -175,4 +185,9 @@ au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
 " Source vimrc
-map <C-R> :so ~/.vimrc<CR>
+map <C-E> :so ~/.vimrc<CR>
+
+" DoF Lua
+au BufNewFile,BufRead *.fus set filetype=sql
+au BufNewFile,BufRead *.fub set filetype=sql
+

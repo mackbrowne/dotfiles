@@ -1,1 +1,1 @@
-ssh -i ~/.ssh/ajoslin-webserver.pem ubuntu@ec2-107-21-71-25.compute-1.amazonaws.com
+ssh -i ~/.ssh/ajoslin-webserver.pem ubuntu@ec2-50-16-33-245.compute-1.amazonaws.com

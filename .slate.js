@@ -1,7 +1,6 @@
 var apple_dir = "/Users/andyjoslin/scripts";
 var switch_dark = apple_dir + "/switch_dark.scpt";
 var switch_light = apple_dir + "/switch_light.scpt";
-var light_state = false;
 var modal_key = ":s,ctrl";
 
 function ascript(file) {
@@ -45,15 +44,15 @@ var halfRight = halfLeft.dup({
 S.bnda({
   // Resize Bindings
   // NOTE: some of these may *not* work if you have not removed the expose/spaces/mission control bindings
-  "l:alt,cmd" : S.op("resize", { "width" : "+10%", "height" : "+0" }),
-  "h:alt,cmd" : S.op("resize", { "width" : "-10%", "height" : "+0" }),
-  "k:alt,cmd" : S.op("resize", { "width" : "+0", "height" : "-10%" }),
-  "j:alt,cmd" : S.op("resize", { "width" : "+0", "height" : "+10%" }),
+  "l:alt,cmd,shift" : S.op("resize", { "width" : "+10%", "height" : "+0" }),
+  "h:alt,cmd,shift" : S.op("resize", { "width" : "-10%", "height" : "+0" }),
+  "k:alt,cmd,shift" : S.op("resize", { "width" : "+0", "height" : "-10%" }),
+  "j:alt,cmd,shift" : S.op("resize", { "width" : "+0", "height" : "+10%" }),
 
-  "l:ctrl,cmd" : S.op("resize", { "width" : "-10%", "height" : "+0", "anchor" : "bottom-right" }),
-  "h:ctrl,cmd" : S.op("resize", { "width" : "+10%", "height" : "+0", "anchor" : "top-right" }),
-  "k:ctrl,cmd" : S.op("resize", { "width" : "+0", "height" : "+10%", "anchor" : "bottom-right" }),
-  "j:ctrl,cmd" : S.op("resize", { "width" : "+0", "height" : "-10%", "anchor" : "bottom-right" }),
+  "l:ctrl,cmd,shift" : S.op("resize", { "width" : "-10%", "height" : "+0", "anchor" : "bottom-right" }),
+  "h:ctrl,cmd,shift" : S.op("resize", { "width" : "+10%", "height" : "+0", "anchor" : "top-right" }),
+  "k:ctrl,cmd,shift" : S.op("resize", { "width" : "+0", "height" : "+10%", "anchor" : "bottom-right" }),
+  "j:ctrl,cmd,shift" : S.op("resize", { "width" : "+0", "height" : "-10%", "anchor" : "bottom-right" }),
 
   // Push Bindings
   // NOTE: some of these may *not* work if you have not removed the expose/spaces/mission control bindings
@@ -80,7 +79,40 @@ S.bnda({
   "esc:ctrl" : S.op("grid")
 });
 
-slate.bind('-' + modal_key, function() { 
+function appIsOpen(name) {
+  var isOpen = false;
+  slate.eachApp(function(app) {
+    if (app.name == name) isOpen = true;
+  });
+  return isOpen;
+}
+
+var focus_apps = {
+  f: 'iTerm',
+  t: 'Messages',
+  x: 'Xcode',
+  s: 'iOS Simulator',
+  m: function() {
+    if (appIsOpen("iTunes")) {
+      return "iTunes";
+    }
+    return "Spotify";
+  },
+  d: function() {
+    if (appIsOpen("Google Chrome Canary")) { 
+      return "Google Chrome Canary";
+    }
+    return "Google Chrome";
+  }
+};
+
+_(focus_apps).forEach(function(app, key) {
+  S.bind(key + modal_key, S.op("focus", {app: app}));
+});
+
+S.bind('q'+modal_key, S.op("relaunch"));
+var light_state = false;
+slate.bind('c' + modal_key, function() { 
   if (light_state) {
     ascript(switch_dark);
   } else {
