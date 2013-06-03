@@ -1,6 +1,6 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="gnzh"
+ZSH_THEME="../../themes/gnzh-ajoslin"
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -36,3 +36,5 @@ set -s escape-time 0
 source $ZSH/oh-my-zsh.sh
 unsetopt correct
 LESS="-R" 
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

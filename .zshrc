@@ -18,3 +18,5 @@ function gitd {
 
 # For tmux-powerline
 PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
