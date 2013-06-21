@@ -20,8 +20,8 @@
 !.zprofile
 !.zshrc
 !.zshrc.pre-oh-my-zsh
-!colors
 !scripts
+!themes
 *.html.js
 *.swp
 *.zip

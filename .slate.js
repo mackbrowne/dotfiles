@@ -109,14 +109,3 @@ var focus_apps = {
 _(focus_apps).forEach(function(app, key) {
   S.bind(key + modal_key, S.op("focus", {app: app}));
 });
-
-S.bind('q'+modal_key, S.op("relaunch"));
-var light_state = false;
-slate.bind('c' + modal_key, function() { 
-  if (light_state) {
-    ascript(switch_dark);
-  } else {
-    ascript(switch_light);
-  }
-  light_state = !light_state;
-},false);

@@ -1,6 +1,6 @@
 source ~/.zprofile
 
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/npm/bin:/usr/local/deployd/bin:/usr/local/Cellar/ruby/2.0.0-p0/bin
+export PATH=/usr/local/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/npm/bin:/usr/local/deployd/bin:/usr/local/Cellar/ruby/2.0.0-p0/bin
 export ANDROID_BIN=/Users/andyjoslin/dev/tools/android/sdk/tools/android
 export EDITOR=vi
 

@@ -32,6 +32,7 @@ Bundle 'tpope/vim-commentary'
 Bundle 'kana/vim-fakeclip'
 Bundle 'xolox/vim-lua-ftplugin'
 Bundle 'godlygeek/tabular'
+Bundle 'editorconfig/editorconfig-vim'
 
 :let g:tabular_loaded = 1
 
