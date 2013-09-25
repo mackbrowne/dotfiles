@@ -15,7 +15,6 @@ Bundle 'wavded/vim-stylus'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'hail2u/vim-css3-syntax'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
 Bundle 'kien/rainbow_parentheses.vim'
@@ -33,6 +32,7 @@ Bundle 'kana/vim-fakeclip'
 Bundle 'xolox/vim-lua-ftplugin'
 Bundle 'godlygeek/tabular'
 Bundle 'editorconfig/editorconfig-vim'
+Bundle 'chrisbra/color_highlight'
 
 :let g:tabular_loaded = 1
 
@@ -76,13 +76,13 @@ if filereadable("/tmp/LIGHT")
 else
   set background=dark
 endif
-colorscheme solarized
+colo solarized
 let g:solarized_contrast="high"
 
-" Keep all lines in files from exceeding 80 characters so there are no wrapping
+" Keep all lines in files from exceeding x characters so there are no wrapping
 " issues when viewed anywhere. 
-" The following command will create a vertical line at 80
-set colorcolumn=80
+" The following command will create a vertical line at x
+set colorcolumn=100
 
 " Escape + save in one
 inoremap Hh <Esc>
@@ -138,7 +138,7 @@ set nohlsearch
 set gdefault
 
 " Syntastic
-let g:syntastic_html_checker = []
+let g:syntastic_html_checkers = []
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_error_symbol='⮀'
 let g:syntastic_warning_symbol='⮁'
@@ -159,8 +159,7 @@ let g:EasyMotion_mapping_w = ''
 " Ag
 map <Leader>n :cn<CR>
 map <Leader>N :cN<CR>
-map <Leader>s :Ag --ignore="node_modules/ 
-map <Leader>S :Ag
+map <Leader>s :Ag 
 
 " Ctrl p
 let g:ctrlp_working_path_mode = ''
@@ -185,6 +184,10 @@ au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
+" Colorizer
+let g:colorizer_auto_filetype='css,html,styl,less'
+map <Leader>c :ColorHighlight<CR>
+
 " Source vimrc
 map <C-E> :so ~/.vimrc<CR>
 
@@ -192,3 +195,4 @@ map <C-E> :so ~/.vimrc<CR>
 au BufNewFile,BufRead *.fus set filetype=sql
 au BufNewFile,BufRead *.fub set filetype=sql
 
+Bundle 'rking/ag.vim'

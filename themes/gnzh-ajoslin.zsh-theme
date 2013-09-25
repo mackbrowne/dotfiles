@@ -15,7 +15,7 @@ eval PR_BOLD="%{$terminfo[bold]%}"
 
 # Check the UID
 if [[ $UID -ge 1000 ]]; then # normal user
-  eval PR_USER='${PR_GREEN}%n${PR_NO_COLOR}'
+  eval PR_USER='${PR_GREEN}ajoslin${PR_NO_COLOR}'
   eval PR_USER_OP='${PR_GREEN}%#${PR_NO_COLOR}'
   local PR_PROMPT='$PR_NO_COLOR➤ $PR_NO_COLOR'
 elif [[ $UID -eq 0 ]]; then # root
