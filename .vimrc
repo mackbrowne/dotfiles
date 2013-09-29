@@ -2,9 +2,6 @@ set nocompatible               " be iMproved
 filetype on
 filetype off                   " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
 " If vundle is not installed, do it first
 if (!isdirectory(expand("$HOME/.vim/bundle/vundle")))
     call system(expand("mkdir -p $HOME/.vim/bundle"))
