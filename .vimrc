@@ -42,6 +42,7 @@ Bundle 'scrooloose/nerdtree'
 if vundleExists == 0
   echo "Installing Bundles, ignore errors"
   :BundleInstall
+endif
 
 :let g:tabular_loaded = 1
 
