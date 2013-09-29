@@ -5,11 +5,18 @@ filetype off                   " required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+" If vundle is not installed, do it first
+if (!isdirectory(expand("$HOME/.vim/bundle/vundle")))
+    call system(expand("mkdir -p $HOME/.vim/bundle"))
+    call system(expand("git clone git://github.com/gmarik/vundle.git $HOME/.vim/bundle/vundle"))
+    echoerr 'Vundle was freshly installed. You should run :BundleInstall'
+endif
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
 " let Vundle manage Vundle
-"  " required!
 Bundle 'gmarik/vundle'
-" My Bundles here:
-"
 " github repos
 Bundle 'wavded/vim-stylus'
 Bundle 'Lokaltog/vim-easymotion'
