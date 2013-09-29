@@ -3,10 +3,11 @@ filetype on
 filetype off                   " required!
 
 " If vundle is not installed, do it first
+let vundleExists = 1
 if (!isdirectory(expand("$HOME/.vim/bundle/vundle")))
     call system(expand("mkdir -p $HOME/.vim/bundle"))
     call system(expand("git clone git://github.com/gmarik/vundle.git $HOME/.vim/bundle/vundle"))
-    echoerr 'Vundle was freshly installed. You should run :BundleInstall'
+    let vundleExists = 0
 endif
 
 set rtp+=~/.vim/bundle/vundle/
@@ -37,6 +38,10 @@ Bundle 'godlygeek/tabular'
 Bundle 'editorconfig/editorconfig-vim'
 Bundle 'chrisbra/color_highlight'
 Bundle 'scrooloose/nerdtree'
+
+if vundleExists == 0
+  echo "Installing Bundles, ignore errors"
+  :BundleInstall
 
 :let g:tabular_loaded = 1
 
