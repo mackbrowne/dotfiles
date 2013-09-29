@@ -36,5 +36,3 @@ set -s escape-time 0
 source $ZSH/oh-my-zsh.sh
 unsetopt correct
 LESS="-R" 
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
