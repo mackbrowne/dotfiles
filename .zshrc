@@ -1,5 +1,4 @@
 source ~/.zprofile
-source ~/.nvm/nvm.sh
 
 export PATH=/usr/local/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/npm/bin:/usr/local/deployd/bin:/usr/local/Cellar/ruby/2.0.0-p0/bin:/Users/andyjoslin/.rvm/gems/ruby-2.0.0-p195/bin
 export ANDROID_BIN=/Users/andyjoslin/dev/tools/android/sdk/tools/android
@@ -7,7 +6,7 @@ export EDITOR=vi
 
 zstyle ':completion:*:*:git:*' script ~/.git-completion.sh
 
-alias subl='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl'
+alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 alias forge="/Users/andyjoslin/Library/Trigger\ Toolkit/forge"
 alias resize="imgresizer"
 alias dsock="/Users/andyjoslin/dev/me/design-socket-server/bin/design-socket"

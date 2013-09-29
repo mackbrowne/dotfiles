@@ -19,7 +19,6 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'pangloss/vim-javascript'
-Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-ragtag'
 Bundle 'tpope/vim-repeat'
@@ -33,6 +32,7 @@ Bundle 'xolox/vim-lua-ftplugin'
 Bundle 'godlygeek/tabular'
 Bundle 'editorconfig/editorconfig-vim'
 Bundle 'chrisbra/color_highlight'
+Bundle 'scrooloose/nerdtree'
 
 :let g:tabular_loaded = 1
 
