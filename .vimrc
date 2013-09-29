@@ -41,6 +41,7 @@ Bundle 'scrooloose/nerdtree'
 if vundleExists == 0
   echo "Installing Bundles, ignore errors"
   :BundleInstall
+  echo "Things may not work properly until you restart vim"
 endif
 
 :let g:tabular_loaded = 1
