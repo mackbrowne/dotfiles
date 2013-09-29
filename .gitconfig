@@ -19,5 +19,3 @@
 	ui = true
 [web]
 	browser = open
-[push]
-	default = simple
