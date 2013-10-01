@@ -77,6 +77,8 @@ set wildignore+=*/tmp/*
 let mapleader="f"
 set nofoldenable    " disable folding
 
+set backspace=indent,eol,start
+
 " Count inside an html tag as a pair eg <span>hello</span>
 set matchpairs+=>:<
 
