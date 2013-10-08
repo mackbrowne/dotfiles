@@ -37,6 +37,7 @@ Bundle 'godlygeek/tabular'
 Bundle 'editorconfig/editorconfig-vim'
 Bundle 'chrisbra/color_highlight'
 Bundle 'scrooloose/nerdtree'
+Bundle 'pivotal/tmux-config'
 
 if vundleExists == 0
   echo "Installing Bundles, ignore errors"
