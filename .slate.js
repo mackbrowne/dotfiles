@@ -90,20 +90,13 @@ function appIsOpen(name) {
 var focus_apps = {
   f: 'iTerm',
   t: 'Messages',
+  h: 'HipChat',
   x: 'Xcode',
   s: 'iOS Simulator',
-  m: function() {
-    if (appIsOpen("iTunes")) {
-      return "iTunes";
-    }
-    return "Spotify";
-  },
-  d: function() {
-    if (appIsOpen("Google Chrome Canary")) { 
-      return "Google Chrome Canary";
-    }
-    return "Google Chrome";
-  }
+  m: 'iTunes',
+  n: 'Spotify',
+  d: 'Google Chrome',
+  r: 'Google Chrome Canary'
 };
 
 _(focus_apps).forEach(function(app, key) {

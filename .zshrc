@@ -1,6 +1,7 @@
 source ~/.zprofile
 
-export PATH=/usr/local/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/npm/bin:/usr/local/deployd/bin:/usr/local/Cellar/ruby/2.0.0-p0/bin:/Users/andyjoslin/.rvm/gems/ruby-2.0.0-p195/bin
+export PATH=/usr/local/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/npm/bin:/usr/local/deployd/bin:/usr/local/Cellar/ruby/2.0.0-p0/bin:/Users/andyjoslin/.rvm/gems/ruby-2.0.0-p195/bin:/Users/andyjoslin/dev/tools/android/sdk/platform-tools:/Users/andyjoslin/dev/tools/android/sdk/tools
+
 export ANDROID_BIN=/Users/andyjoslin/dev/tools/android/sdk/tools/android
 export EDITOR=vi
 
@@ -23,4 +24,3 @@ function gitd {
 # For tmux-powerline
 PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

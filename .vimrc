@@ -20,8 +20,8 @@ Bundle 'wavded/vim-stylus'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
+Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'scrooloose/syntastic'
@@ -75,7 +75,7 @@ set wildignore+=.coffee.js
 set wildignore+=*.rbc,*.scssc,*.sassc
 set wildignore+=*/spec/dummy/*
 set wildignore+=*/tmp/*
-let mapleader="f"
+let mapleader=" "
 set nofoldenable    " disable folding
 
 set backspace=indent,eol,start
@@ -91,6 +91,7 @@ else
 endif
 colo solarized
 let g:solarized_contrast="high"
+let g:solarized_visibility="high"
 
 " Keep all lines in files from exceeding x characters so there are no wrapping
 " issues when viewed anywhere. 
@@ -151,10 +152,10 @@ set nohlsearch
 set gdefault
 
 " Syntastic
-let g:syntastic_html_checkers = []
 let g:syntastic_javascript_checkers = ['jshint']
-let g:syntastic_error_symbol='⮀'
-let g:syntastic_warning_symbol='⮁'
+let g:syntastic_html_checkers = []
+let g:syntastic_check_on_open = 1
+let g:syntastic_enable_signs=1
 
 " EasyMotion
 let g:EasyMotion_leader_key = '<Leader>'
