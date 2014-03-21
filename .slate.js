@@ -1,5 +1,5 @@
-// https://github.com/jigish/slate
 // Bindings for slate.
+// https://github.com/jigish/slate
 // Hotkeys for quickly opening apps & changing window size
 
 // Window size /position shortcuts
