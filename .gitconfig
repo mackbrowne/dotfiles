@@ -1,6 +1,4 @@
 [user]
-	email = andytjoslin@gmail.com
-	name = Andy Joslin
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 	co = checkout
@@ -21,3 +19,6 @@
 	browser = open
 [push]
 	default = matching
+[user]
+	name = Andy Joslin
+	email = andytjoslin@gmail.com

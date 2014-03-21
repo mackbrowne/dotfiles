@@ -1,12 +1,5 @@
 var apple_dir = "/Users/andyjoslin/scripts";
-var switch_dark = apple_dir + "/switch_dark.scpt";
-var switch_light = apple_dir + "/switch_light.scpt";
 var modal_key = ":s,ctrl";
-
-function ascript(file) {
-  return slate.shell("/usr/bin/osascript " + file, false);
-}
-
 
 // Configs
 S.cfga({
@@ -18,65 +11,14 @@ S.cfga({
 
 var RECT = slate.screen().rect;
 
-
-// Operations
-var lapChat = S.op("corner", {
-  "direction" : "top-left",
-  "width" : "screenSizeX/9",
-  "height" : "screenSizeY"
-});
-var full = S.op("move", {
-  x: 0, y: 0,
-  direction: "top-left",
-  width: "screenSizeX",
-  height: "screenSizeY"
-});
-var halfLeft = S.op("move", {
-  x: 0, y: 0,
-  width: "screenSizeX/2", 
-  height: "screenSizeY"
-});
-var halfRight = halfLeft.dup({
-  x: "screenSizeX/2"
-});
-
 // Batch bind everything. Less typing.
 S.bnda({
-  // Resize Bindings
-  // NOTE: some of these may *not* work if you have not removed the expose/spaces/mission control bindings
-  "l:alt,cmd,shift" : S.op("resize", { "width" : "+10%", "height" : "+0" }),
-  "h:alt,cmd,shift" : S.op("resize", { "width" : "-10%", "height" : "+0" }),
-  "k:alt,cmd,shift" : S.op("resize", { "width" : "+0", "height" : "-10%" }),
-  "j:alt,cmd,shift" : S.op("resize", { "width" : "+0", "height" : "+10%" }),
-
-  "l:ctrl,cmd,shift" : S.op("resize", { "width" : "-10%", "height" : "+0", "anchor" : "bottom-right" }),
-  "h:ctrl,cmd,shift" : S.op("resize", { "width" : "+10%", "height" : "+0", "anchor" : "top-right" }),
-  "k:ctrl,cmd,shift" : S.op("resize", { "width" : "+0", "height" : "+10%", "anchor" : "bottom-right" }),
-  "j:ctrl,cmd,shift" : S.op("resize", { "width" : "+0", "height" : "-10%", "anchor" : "bottom-right" }),
-
   // Push Bindings
-  // NOTE: some of these may *not* work if you have not removed the expose/spaces/mission control bindings
   "l:ctrl;shift" : S.op("push", { "direction" : "right", "style" : "bar-resize:screenSizeX/2" }),
   "h:ctrl;shift" : S.op("push", { "direction" : "left", "style" : "bar-resize:screenSizeX/2" }),
   "k:ctrl;shift" : S.op("push", { "direction" : "up", "style" : "bar-resize:screenSizeY/2" }),
   "j:ctrl;shift" : S.op("push", { "direction" : "down", "style" : "bar-resize:screenSizeY/2" }),
   "m:ctrl;shift" : S.op("push", { "direction": "left", "style": "bar-resize:screenSizeX" }),
-
-  // Nudge Bindings
-  // NOTE: some of these may *not* work if you have not removed the expose/spaces/mission control bindings
-  "l:ctrl;alt" : S.op("nudge", { "x" : "+10%", "y" : "+0" }),
-  "h:ctrl;alt" : S.op("nudge", { "x" : "-10%", "y" : "+0" }),
-  "k:ctrl;alt" : S.op("nudge", { "x" : "+0", "y" : "-10%" }),
-  "j:ctrl;alt" : S.op("nudge", { "x" : "+0", "y" : "+10%" }),
-  
-  // Window Hints
-  "esc:cmd" : S.op("hint"),
-
-  // Switch currently doesn't work well so I'm commenting it out until I fix it.
-  //"tab:cmd" : S.op("switch"),
-
-  // Grid
-  "esc:ctrl" : S.op("grid")
 });
 
 function appIsOpen(name) {
@@ -87,6 +29,10 @@ function appIsOpen(name) {
   return isOpen;
 }
 
+// Binds modal key + {char} to focus different open apps
+// ctrl-s + h = focus hipchat
+// ctrl-s + f = focus iterm
+// etc
 var focus_apps = {
   f: 'iTerm',
   t: 'Messages',
@@ -96,7 +42,10 @@ var focus_apps = {
   m: 'iTunes',
   n: 'Spotify',
   d: 'Google Chrome',
-  r: 'Google Chrome Canary'
+  a: 'Safari',
+  r: 'Google Chrome Canary',
+  v: 'DEVONthink Pro Office',
+  p: 'Pandora'
 };
 
 _(focus_apps).forEach(function(app, key) {

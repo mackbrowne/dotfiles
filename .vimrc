@@ -24,6 +24,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'pangloss/vim-javascript'
+Bundle 'mxw/vim-jsx'
 Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-ragtag'
 Bundle 'tpope/vim-repeat'
@@ -38,6 +39,7 @@ Bundle 'editorconfig/editorconfig-vim'
 Bundle 'chrisbra/color_highlight'
 Bundle 'scrooloose/nerdtree'
 Bundle 'pivotal/tmux-config'
+Bundle 'groenewege/vim-less'
 
 if vundleExists == 0
   echo "Installing Bundles, ignore errors"
@@ -144,7 +146,7 @@ set ttymouse=xterm2
 set mouse=a
 
 " Remove trailing whitespace on save
-map <leader>w :%s/\s\+$//e<CR>
+map <Leader>h :%s/\s\+$//e<CR>
 
 set nohlsearch
 
@@ -205,7 +207,8 @@ map <Leader>c :ColorHighlight<CR>
 " Source vimrc
 map <C-E> :so ~/.vimrc<CR>
 
-" DoF Lua
+" On Load Syntax
+au BufNewFile,BufRead *.ejs set filetype=html
 au BufNewFile,BufRead *.fus set filetype=sql
 au BufNewFile,BufRead *.fub set filetype=sql
 
