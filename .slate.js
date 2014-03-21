@@ -1,4 +1,17 @@
-var apple_dir = "/Users/andyjoslin/scripts";
+// https://github.com/jigish/slate
+// Bindings for slate.
+// Hotkeys for quickly opening apps & changing window size
+
+// Window size /position shortcuts
+// ctrl+shift+h = use left half of screen. 
+// ctrl+shift+l = right half, hjkl 
+// ctrl+shift+m = use full window
+//
+// Binds modal key + {char} to focus different open apps
+// ctrl-s + h = focus hipchat
+// ctrl-s + f = focus iterm
+// etc, see below
+
 var modal_key = ":s,ctrl";
 
 // Configs
@@ -9,9 +22,6 @@ S.cfga({
   "focusCheckWidthMax" : 3000
 });
 
-var RECT = slate.screen().rect;
-
-// Batch bind everything. Less typing.
 S.bnda({
   // Push Bindings
   "l:ctrl;shift" : S.op("push", { "direction" : "right", "style" : "bar-resize:screenSizeX/2" }),
@@ -29,10 +39,6 @@ function appIsOpen(name) {
   return isOpen;
 }
 
-// Binds modal key + {char} to focus different open apps
-// ctrl-s + h = focus hipchat
-// ctrl-s + f = focus iterm
-// etc
 var focus_apps = {
   f: 'iTerm',
   t: 'Messages',
