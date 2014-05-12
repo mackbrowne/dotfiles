@@ -32,7 +32,7 @@ ag --version || (
 
 echo '*** make home folder have dotfiles ***'
 git init .
-git remote add origin git://github.com/ajoslin/dotfiles
+git remote add origin git://github.com/mackbrowne/dotfiles
 git pull origin master
 
 echo '*** install jshint for syntastic ***'
