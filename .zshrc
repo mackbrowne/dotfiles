@@ -4,16 +4,15 @@ source ~/.zprofile
 
 ZSH_THEME="steeef"
 
-export PATH=/usr/local/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/npm/bin:/usr/local/Cellar/ruby/2.0.0-p0/bin:/Users/mackbrowne/.rvm/gems/ruby-2.0.0-p195/bin:/Users/mackbrowne/dev/tools/android/sdk/platform-tools:/Users/mackbrowne/dev/tools/android/sdk/tools
+export ANDROID_HOME=/Users/mackbrowne/android-sdk
+
+export PATH=/usr/local/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/npm/bin:/usr/local/Cellar/ruby/2.0.0-p0/bin:/Users/mackbrowne/.rvm/gems/ruby-2.0.0-p195/bin:~ANDROID_HOME/platform-tools:~ANDROID_HOME/tools
 
 export EDITOR=vim
 
 zstyle ':completion:*:*:git:*' script ~/.git-completion.sh
 
-alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
-alias forge="/Users/andyjoslin/Library/Trigger\ Toolkit/forge"
-alias resize="imgresizer"
-alias dsock="/Users/andyjoslin/dev/me/design-socket-server/bin/design-socket"
+alias subl='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl'
 
 function sedr() {
   sed -i '' 's/$1/$2/g' $(ag -l $1)

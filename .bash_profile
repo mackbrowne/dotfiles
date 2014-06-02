@@ -1,7 +1,7 @@
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-[[ -s /Users/andyjoslin/.nvm/nvm.sh ]] && . /Users/andyjoslin/.nvm/nvm.sh # This loads NVM
+[[ -s /Users/mackbrowne/.nvm/nvm.sh ]] && . /Users/mackbrowne/.nvm/nvm.sh # This loads NVM
 
 # {{{
 # Node Completion - Auto-generated, do not touch.
@@ -11,3 +11,6 @@ for f in $(command ls ~/.node-completion); do
   test -f "$f" && . "$f"
 done
 # }}}
+
+export ANDROID_HOME="/Users/mackbrowne/android-sdk"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home/"
