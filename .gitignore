@@ -6,7 +6,6 @@
 !.gitconfig
 !.gitignore
 !.gitmodules
-!.jshintrc
 !.oh-my-zsh/
 !.powerline-fonts
 !.slate.js
