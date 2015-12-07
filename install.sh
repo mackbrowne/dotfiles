@@ -26,6 +26,11 @@ ag --version || (
   brew install the_silver_searcher
 )
 
+echo '*** install cloc if not exist ***'
+cloc --version || (
+  brew install cloc
+)
+
 echo '*** install meteor if not exists ***'
 meteor --version || (
   curl https://install.meteor.com/ | sh
