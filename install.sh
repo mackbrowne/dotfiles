@@ -36,9 +36,6 @@ git init .
 git remote add origin git://github.com/mackbrowne/dotfiles
 git pull origin master
 
-echo '*** install jshint for syntastic ***'
-jshint --version || sudo npm install -g jshint --silent
-
 echo '*** Installation Complete ***'
 echo '*** Restart your shell and it will use zsh ***'
 echo '*** Start vim and it will auto-install all plugins ***'
