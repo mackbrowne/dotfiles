@@ -16,6 +16,11 @@ brew --version || (
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 )
 
+echo '*** install node if not exists ***'
+node --version || (
+  brew install node
+)
+
 echo '*** install ag if not exists, ag is grep/ack replacement **'
 ag --version || (
   brew install the_silver_searcher
