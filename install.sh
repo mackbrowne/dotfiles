@@ -44,3 +44,6 @@ git pull origin master
 echo '*** Installation Complete ***'
 echo '*** Restart your shell and it will use zsh ***'
 echo '*** Start vim and it will auto-install all plugins ***'
+
+echo '*** remove git repo after configs have been added ***'
+rm -rf .git/
