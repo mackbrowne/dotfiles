@@ -11,23 +11,19 @@ cat /etc/shells | grep zsh || sudo echo $(which zsh) >> /etc/shells
 echo '*** make zsh default shell ***'
 chsh -s /usr/bin/zsh
 
-echo '*** install node if not exists ***'
-node --version || (
-  sudo git clone git://github.com/joyent/node /tmp/node
-  cd /tmp/node
-  sudo git checkout -b v0.10.18
-  sudo ./configure >> /dev/null
-  sudo make >> /dev/null
-  sudo make install >> /dev/null
+echo '*** install homebrew if not exists ***'
+brew --version || (
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 )
 
 echo '*** install ag if not exists, ag is grep/ack replacement **'
 ag --version || (
-  sudo apt-get install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
-  git clone git://github.com/ggreer/the_silver_searcher /tmp/the_silver_searcher
-  cd /tmp/the_silver_searcher
-  ./build.sh >> /dev/null
-  sudo make install >> /dev/null
+  brew install the_silver_searcher
+)
+
+echo '*** install meteor if not exists ***'
+meteor --version || (
+  curl https://install.meteor.com/ | sh
 )
 
 echo '*** make home folder have dotfiles ***'
