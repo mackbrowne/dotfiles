@@ -71,6 +71,11 @@ sip --version || (
   brew cask install sip
 )
 
+echo '*** install ntfs4mac ***'
+paragon-ntfs --version || (
+  brew cask install paragon-ntfs
+)
+
 echo '*** install atom ***'
 atom --version || ( 
   brew cask install atom
@@ -81,7 +86,17 @@ mas --version || (
   brew install mas
 )
 
+echo '*** Install Wunderlist ***'
+mas install 410628904
 
+echo '*** magnet ***'
+mas install 441258766
+
+echo '*** xCode ***'
+mas install 497799835
+
+echo '*** lastpass ***'
+mas install 926036361
 
 echo '*** install ios android sdks ***'
 meteor install-sdk ios
