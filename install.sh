@@ -77,6 +77,11 @@ sip --version || (
   brew cask install sip
 )
 
+echo '*** install robo-3t ***'
+robo-3t --version || ( 
+  brew cask install robo-3t
+)
+
 echo '*** install ntfs4mac ***'
 paragon-ntfs --version || (
   brew cask install paragon-ntfs
