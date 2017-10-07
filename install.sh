@@ -2,12 +2,8 @@
 
 cd $HOME
 
-echo '*** Ubuntu setup: update & install stuff ***'
-sudo apt-get update -y >> /dev/null
-sudo apt-get install build-essential git vim zsh -y >> /dev/null
-
 echo '*** add zsh to shell if not exist ***'
-cat /etc/shells | grep zsh || sudo echo $(which zsh) >> /etc/shells
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 echo '*** make zsh default shell ***'
 chsh -s /usr/bin/zsh
 
@@ -36,6 +32,10 @@ meteor --version || (
   curl https://install.meteor.com/ | sh
 )
 
+echo '*** install ios android sdks ***'
+meteor install-sdk ios
+meteor install-sdk android
+
 echo '*** make home folder have dotfiles ***'
 git init .
 git remote add origin git://github.com/mackbrowne/dotfiles
@@ -43,7 +43,6 @@ git pull origin master
 
 echo '*** Installation Complete ***'
 echo '*** Restart your shell and it will use zsh ***'
-echo '*** Start vim and it will auto-install all plugins ***'
 
 echo '*** remove git repo after configs have been added ***'
 rm -rf .git/
