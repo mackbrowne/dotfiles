@@ -32,6 +32,7 @@ cloc --version || (
 echo '*** install mongodb if not exist ***'
 mongod --version || (
   brew install mongodb
+  brew services start mongodb
 )
 
 echo '*** install meteor if not exists ***'
