@@ -29,6 +29,11 @@ cloc --version || (
   brew install cloc
 )
 
+echo '*** install mongodb if not exist ***'
+mongod --version || (
+  brew install mongodb
+)
+
 echo '*** install meteor if not exists ***'
 meteor --version || (
   curl https://install.meteor.com/ | sh
