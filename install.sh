@@ -110,8 +110,7 @@ echo '*** lastpass ***'
 mas install 926036361
 
 echo '*** install ios android sdks ***'
-meteor install-sdk ios
-meteor install-sdk android
+sudo gem install cocoapods
 
 if(false)
 then
