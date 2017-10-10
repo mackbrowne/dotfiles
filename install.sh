@@ -103,9 +103,6 @@ mas install 410628904
 echo '*** magnet ***'
 mas install 441258766
 
-echo '*** xCode ***'
-mas install 497799835
-
 echo '*** lastpass ***'
 mas install 926036361
 
