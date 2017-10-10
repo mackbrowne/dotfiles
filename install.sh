@@ -113,6 +113,7 @@ echo '*** xCode ***'
 mas install 497799835		
 sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
 sudo gem install cocoapods
+pod setup
  
 if(false)
 then
