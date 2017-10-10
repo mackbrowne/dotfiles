@@ -109,6 +109,10 @@ mas install 926036361
 echo '*** install ios android sdks ***'
 sudo gem install cocoapods
 
+echo '*** xCode ***'		
+mas install 497799835		
+sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
+ 
 if(false)
 then
 echo '*** make home folder have dotfiles ***'
