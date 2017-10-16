@@ -77,6 +77,11 @@ sip --version || (
   brew cask install sip
 )
 
+echo '*** install airdroid ***'
+airdroid --version || ( 
+  brew cask install airdroid
+)
+
 echo '*** install robo-3t ***'
 robo-3t --version || ( 
   brew cask install robo-3t
