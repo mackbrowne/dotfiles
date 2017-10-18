@@ -97,6 +97,11 @@ atom --version || (
   brew cask install atom
 )
 
+echo '*** install acrobat ***'
+adobe-acrobat-reader --version || (
+  brew cask install adobe-acrobat-reader
+)
+
 echo '==== INSTALL APP STORE STUFF ==='
 mas --version || (
   brew install mas
