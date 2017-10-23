@@ -4,11 +4,6 @@ cd $HOME
 
 echo '=== INSTALL COMMAND LINE TOOLS ==='
 
-echo '*** add zsh to shell if not exist ***'
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-echo '*** make zsh default shell ***'
-chsh -s /usr/bin/zsh
-
 echo '*** install homebrew if not exists ***'
 brew --version || (
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
