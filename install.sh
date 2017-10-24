@@ -14,6 +14,11 @@ node --version || (
   brew install node
 )
 
+echo '*** install yarn if not exists ***'
+yarn --version || (
+  brew install yarn
+)
+
 echo '*** install ag if not exists, ag is grep/ack replacement **'
 ag --version || (
   brew install the_silver_searcher
