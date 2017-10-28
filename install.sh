@@ -107,6 +107,8 @@ mas --version || (
   brew install mas
 )
 
+brew cleanup
+
 echo '*** Install Wunderlist ***'
 mas install 410628904
 
