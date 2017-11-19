@@ -97,6 +97,11 @@ atom --version || (
   brew cask install atom
 )
 
+echo '*** install visual studio code ***'
+visual-studio-code --version || ( 
+  brew cask install visual-studio-code
+)
+
 echo '*** install acrobat ***'
 adobe-acrobat-reader --version || (
   brew cask install adobe-acrobat-reader
