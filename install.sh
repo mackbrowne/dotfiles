@@ -92,11 +92,6 @@ paragon-ntfs --version || (
   brew cask install paragon-ntfs
 )
 
-echo '*** install atom ***'
-atom --version || ( 
-  brew cask install atom
-)
-
 echo '*** install visual studio code ***'
 visual-studio-code --version || ( 
   brew cask install visual-studio-code
@@ -122,26 +117,3 @@ mas install 441258766
 
 echo '*** lastpass ***'
 mas install 926036361
-
-echo '*** install ios android sdks ***'
-sudo gem install cocoapods
-
-echo '*** xCode ***'		
-mas install 497799835		
-sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
-sudo gem install cocoapods
-pod setup
- 
-if(false)
-then
-echo '*** make home folder have dotfiles ***'
-git init .
-git remote add origin git://github.com/mackbrowne/dotfiles
-git pull origin master
-
-echo '*** Installation Complete ***'
-echo '*** Restart your shell and it will use zsh ***'
-
-echo '*** remove git repo after configs have been added ***'
-rm -rf .git/
-fi
