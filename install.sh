@@ -97,6 +97,11 @@ visual-studio-code --version || (
   brew cask install visual-studio-code
 )
 
+echo '*** install zeplin ***'
+zeplin --version || (
+  brew cask install zeplin
+)
+
 echo '*** install acrobat ***'
 adobe-acrobat-reader --version || (
   brew cask install adobe-acrobat-reader
