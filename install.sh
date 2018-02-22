@@ -112,6 +112,11 @@ adobe-acrobat-reader --version || (
   brew cask install adobe-acrobat-reader
 )
 
+echo '*** install postman ***'
+postman --version || (
+  brew cask install postman
+)
+
 echo '==== INSTALL APP STORE STUFF ==='
 mas --version || (
   brew install mas
