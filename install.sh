@@ -19,6 +19,11 @@ yarn --version || (
   brew install yarn
 )
 
+echo '*** install watchman if not exists ***'
+watchman --version || (
+  brew install watchman
+)
+
 echo '*** install ag if not exists, ag is grep/ack replacement **'
 ag --version || (
   brew install the_silver_searcher
