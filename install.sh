@@ -129,7 +129,8 @@ then
 echo '*** make home folder have dotfiles ***'
 git init .
 git remote add origin git://github.com/mackbrowne/dotfiles
-git pull origin master
+git pull origin prodigy
+git checkout prodigy
 
 echo '*** Installation Complete ***'
 echo '*** Restart your shell and it will use zsh ***'
