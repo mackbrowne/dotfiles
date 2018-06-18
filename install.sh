@@ -92,11 +92,6 @@ paragon-ntfs --version || (
   brew cask install paragon-ntfs
 )
 
-echo '*** install atom ***'
-atom --version || ( 
-  brew cask install atom
-)
-
 echo '*** install visual studio code ***'
 visual-studio-code --version || ( 
   brew cask install visual-studio-code
@@ -113,9 +108,6 @@ mas --version || (
 )
 
 brew cleanup
-
-echo '*** Install Wunderlist ***'
-mas install 410628904
 
 echo '*** magnet ***'
 mas install 441258766
