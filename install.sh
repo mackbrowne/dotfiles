@@ -87,8 +87,13 @@ robo-3t --version || (
   brew cask install robo-3t
 )
 
-echo '*** install docker ***'
+echo '*** install docker-compose ***'
 docker-compose --version || (
+  brew install docker-compose
+)
+
+echo '*** install docker ***'
+docker --version || (
   brew cask install docker
 )
 
