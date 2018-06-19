@@ -112,6 +112,11 @@ adobe-acrobat-reader --version || (
   brew cask install adobe-acrobat-reader
 )
 
+echo '*** google drive ***'
+google-drive-file-stream --version || (
+  brew cask install google-drive-file-stream
+)
+
 echo '==== INSTALL APP STORE STUFF ==='
 mas --version || (
   brew install mas
