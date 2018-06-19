@@ -87,6 +87,11 @@ robo-3t --version || (
   brew cask install robo-3t
 )
 
+echo '*** install docker ***'
+docker-compose --version || (
+  brew cask install docker
+)
+
 echo '*** install ntfs4mac ***'
 paragon-ntfs --version || (
   brew cask install paragon-ntfs
