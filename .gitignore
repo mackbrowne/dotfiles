@@ -1,18 +1,10 @@
 !.agignore
 !.bash_profile
-!.emacs
-!.emacs.d/
 !.git-completion.sh
 !.gitconfig
 !.gitignore
 !.gitmodules
 !.oh-my-zsh/
-!.powerline-fonts
-!.slate.js
-!.tmux-powerline
-!.tmux-powerlinerc
-!.tmux.conf
-!.tmuxifier
 !.vim/
 !.vim/bundle/vundle
 !.vimrc
@@ -23,7 +15,6 @@
 !install.sh
 !scripts
 !themes
-*.html.js
 *.swp
 *.zip
 .vim/.netrwhist

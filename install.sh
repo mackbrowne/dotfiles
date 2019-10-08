@@ -29,17 +29,6 @@ cloc --version || (
   brew install cloc
 )
 
-echo '*** install mongodb if not exist ***'
-mongod --version || (
-  brew install mongodb
-  brew services start mongodb
-)
-
-echo '*** install meteor if not exists ***'
-meteor --version || (
-  curl https://install.meteor.com/ | sh
-)
-
 echo '=== INSTALL APPLICATIONS ==='
 
 echo '*** brew cask ***'
@@ -77,26 +66,6 @@ sip --version || (
   brew cask install sip
 )
 
-echo '*** install airdroid ***'
-airdroid --version || ( 
-  brew cask install airdroid
-)
-
-echo '*** install robo-3t ***'
-robo-3t --version || ( 
-  brew cask install robo-3t
-)
-
-echo '*** install docker-compose ***'
-docker-compose --version || (
-  brew install docker-compose
-)
-
-echo '*** install docker ***'
-docker --version || (
-  brew cask install docker
-)
-
 echo '*** install ntfs4mac ***'
 paragon-ntfs --version || (
   brew cask install paragon-ntfs
@@ -112,26 +81,7 @@ adobe-acrobat-reader --version || (
   brew cask install adobe-acrobat-reader
 )
 
-echo '*** google drive ***'
-google-drive-file-stream --version || (
-  brew cask install google-drive-file-stream
-)
-
-echo '==== INSTALL APP STORE STUFF ==='
-mas --version || (
-  brew install mas
-)
-
 brew cleanup
-
-echo '*** magnet ***'
-mas install 441258766
-
-echo '*** lastpass ***'
-mas install 926036361
-
-echo '*** install ios android sdks ***'
-sudo gem install cocoapods
 
 echo '*** xCode ***'		
 mas install 497799835		
@@ -144,8 +94,8 @@ then
 echo '*** make home folder have dotfiles ***'
 git init .
 git remote add origin git://github.com/mackbrowne/dotfiles
-git pull origin prodigy
-git checkout prodigy
+git pull origin mackbrowne-2019
+git checkout mackbrowne-2019
 
 echo '*** Installation Complete ***'
 echo '*** Restart your shell and it will use zsh ***'

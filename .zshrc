@@ -4,9 +4,9 @@ source ~/.zprofile
 
 ZSH_THEME="steeef"
 
-export ANDROID_HOME=/Users/mackenzie.browne/android-sdk
+export ANDROID_HOME=/Users/mackbrowne/android-sdk
 
-export PATH=/usr/local/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/npm/bin:/usr/local/Cellar/ruby/2.0.0-p0/bin:/Users/mackenzie.browne/.rvm/gems/ruby-2.0.0-p195/bin:~ANDROID_HOME/platform-tools:~ANDROID_HOME/tools
+export PATH=/usr/local/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/npm/bin:/usr/local/Cellar/ruby/2.0.0-p0/bin:/Users/mackbrowne/.rvm/gems/ruby-2.0.0-p195/bin:~ANDROID_HOME/platform-tools:~ANDROID_HOME/tools
 
 export EDITOR=vim
 
