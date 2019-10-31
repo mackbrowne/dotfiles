@@ -94,8 +94,7 @@ then
 echo '*** make home folder have dotfiles ***'
 git init .
 git remote add origin git://github.com/mackbrowne/dotfiles
-git pull origin mackbrowne-2019
-git checkout mackbrowne-2019
+git pull origin master
 
 echo '*** Installation Complete ***'
 echo '*** Restart your shell and it will use zsh ***'
