@@ -1,30 +1,19 @@
 export ZSH=$HOME/.oh-my-zsh
 
+//TODO: validate
 source ~/.zprofile
 
 ZSH_THEME="steeef"
 
+//TODO: validate
 export ANDROID_HOME=/Users/$USER/android-sdk
 
+//TODO: validate
 export PATH=/usr/local/bin:/usr/local/share/npm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/npm/bin:/usr/local/Cellar/ruby/2.0.0-p0/bin:/Users/$USER/.rvm/gems/ruby-2.0.0-p195/bin:~ANDROID_HOME/platform-tools:~ANDROID_HOME/tools
 
 export EDITOR=vim
 
-zstyle ':completion:*:*:git:*' script ~/.git-completion.sh
-
-alias subl='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl'
-
-function sedr() {
-  sed -i '' 's/$1/$2/g' $(ag -l $1)
-}
-
-function gitd {
-  touch .git/git-daemon-export-ok
-  git daemon --base-path=$1
-}
-
-# For tmux-powerline
-PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
+alias cloc-git='cloc $(git ls-files)'
 
 plugins=(git)
 
