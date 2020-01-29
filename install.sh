@@ -29,6 +29,18 @@ cloc --version || (
   brew install cloc
 )
 
+echo '*** install global yarn packages ***'
+
+echo '*** install expo ***'
+expo --version || (
+  yarn global add expo-cli
+)
+
+echo '*** install firebase ***'
+firebase --version || (
+  yarn global add firebase-tools
+)
+
 echo '=== INSTALL APPLICATIONS ==='
 
 echo '*** brew cask ***'
