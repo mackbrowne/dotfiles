@@ -78,6 +78,11 @@ sip --version || (
   brew cask install sip
 )
 
+echo '*** install spotify ***'
+spotify --version || ( 
+  brew cask install spotify
+)
+
 echo '*** install ntfs4mac ***'
 paragon-ntfs --version || (
   brew cask install paragon-ntfs
