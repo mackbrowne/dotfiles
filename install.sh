@@ -43,59 +43,49 @@ firebase --version || (
 
 echo '=== INSTALL APPLICATIONS ==='
 
-echo '*** brew cask ***'
-brew cask --version || ( 
-  brew tap caskroom/cask
-)
-
 echo '*** install google chrome ***'
 google-chrome --version || ( 
-  brew cask install google-chrome
+  brew install --cask google-chrome
 )
 
 echo '*** install firefox ***'
 firefox --version || ( 
-  brew cask install firefox
+  brew install --cask firefox
 )
 
-echo '*** install canary ***'
-canary --version || ( 
-  brew cask install canary
+echo '*** install chromium ***'
+chromium --version || ( 
+  brew install --cask chromium
 )
 
 echo '*** install franz ***'
 franz --version || ( 
-  brew cask install franz
-)
-
-echo '*** install iterm2 ***'
-iterm2 --version || ( 
-  brew cask install iterm2
+  brew install --cask franz
 )
 
 echo '*** install sip ***'
 sip --version || ( 
-  brew cask install sip
+  brew install --cask sip
 )
 
 echo '*** install spotify ***'
 spotify --version || ( 
-  brew cask install spotify
+  brew install --cask spotify
 )
 
 echo '*** install ntfs4mac ***'
 paragon-ntfs --version || (
-  brew cask install paragon-ntfs
+  brew install --cask paragon-ntfs
 )
 
 echo '*** install visual studio code ***'
 visual-studio-code --version || ( 
-  brew cask install visual-studio-code
+  brew install --cask visual-studio-code
 )
 
-echo '*** install acrobat ***'
-adobe-acrobat-reader --version || (
-  brew cask install adobe-acrobat-reader
+echo '*** install krisp ***'
+krisp --version || ( 
+  brew install --cask krisp
 )
 
 brew cleanup
