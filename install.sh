@@ -88,6 +88,11 @@ krisp --version || (
   brew install --cask krisp
 )
 
+echo '*** install plex ***'
+plex --version || ( 
+  brew install --cask plex
+)
+
 brew cleanup
 
 echo '*** xCode ***'		
