@@ -93,6 +93,9 @@ plex --version || (
   brew install --cask plex
 )
 
+echo '*** install openjdk8 ***'
+brew install --cask adoptopenjdk/openjdk/adoptopenjdk8
+
 brew cleanup
 
 echo '*** xCode ***'		
