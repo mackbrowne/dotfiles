@@ -93,6 +93,16 @@ plex --version || (
   brew install --cask plex
 )
 
+echo '*** install watchman ***'
+watchman --version || ( 
+  brew install watchman
+)
+
+echo '*** install cocoapods ***'
+pod --version || (
+  brew install cocoapods
+)
+
 echo '*** install openjdk8 ***'
 brew install --cask adoptopenjdk/openjdk/adoptopenjdk8
 
@@ -101,7 +111,6 @@ brew cleanup
 echo '*** xCode ***'		
 mas install 497799835		
 sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
-sudo gem install cocoapods
 pod setup
  
 if(false)
