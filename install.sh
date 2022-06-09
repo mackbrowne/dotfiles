@@ -4,11 +4,6 @@ cd $HOME
 
 echo '=== INSTALL COMMAND LINE TOOLS ==='
 
-echo '*** install homebrew if not exists ***'
-brew --version || (
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-)
-
 echo '*** install node if not exists ***'
 node --version || (
   brew install node
