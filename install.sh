@@ -88,6 +88,20 @@ pod --version || (
   brew install cocoapods
 )
 
+brew install --cask rectangle
+
+brew install --cask ableton-live-standard
+
+brew install --cask rekordbox
+
+brew install --cask vlc
+
+brew install --cask android-studio
+
+brew install --cask skype
+
+brew install gh
+
 brew cleanup
 
 echo '*** xCode ***'		
