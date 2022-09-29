@@ -78,11 +78,6 @@ visual-studio-code --version || (
   brew install --cask visual-studio-code
 )
 
-echo '*** install krisp ***'
-krisp --version || ( 
-  brew install --cask krisp
-)
-
 echo '*** install plex ***'
 plex --version || ( 
   brew install --cask plex
@@ -97,9 +92,6 @@ echo '*** install cocoapods ***'
 pod --version || (
   brew install cocoapods
 )
-
-echo '*** install openjdk8 ***'
-brew install --cask adoptopenjdk/openjdk/adoptopenjdk8
 
 brew cleanup
 
