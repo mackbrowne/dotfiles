@@ -6,7 +6,7 @@ echo '=== INSTALL COMMAND LINE TOOLS ==='
 
 echo '*** install node if not exists ***'
 node --version || (
-  brew install node
+  brew install node@16
 )
 
 echo '*** install yarn if not exists ***'
